@@ -1,5 +1,5 @@
 class CurrenciesController < ApplicationController
-  before_action :set_currency, only: [:show, :edit, :update, :destroy, :import]
+  before_action :set_currency, only: [:show, :edit, :update, :destroy]
 
   def index
     
@@ -44,7 +44,7 @@ class CurrenciesController < ApplicationController
 
   def import
     Currency.import(params[:file])
-    redirect_to root_path, notice: "Currencies uploaded successfully"
+    redirect_to currencies_path, notice: "Currencies uploaded successfully"
   end
 
   
