@@ -1,0 +1,16 @@
+
+%h3 
+  %a{:href => 'http://minfin.com.ua/', :target => '_blank'}= "Exchange rate for USD (black market Ukraine)"
+  %br
+%h1
+  Bid 
+  =  @dollarbid  
+  Ask
+  = @dollarask 
+
+%br
+= @min
+
+
+#chart
+= render_chart @chart, 'chart'
